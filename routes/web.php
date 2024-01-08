@@ -25,4 +25,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/example', function() {
+        return 'Pro Post Here!';
+    })->middleware('role:pro');
 });
